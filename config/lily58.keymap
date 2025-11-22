@@ -24,13 +24,13 @@
     };
 
     behaviors {
-        new_behavior: new_behavior {
+        space_enter: space_enter {
             compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp SPACE>, <&kp ENTER>;
+            label = "SPACE_ENTER";
+            bindings = <&kp SPACE>, <&kp KP_ENTER>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
