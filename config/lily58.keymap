@@ -12,11 +12,6 @@
     combos {
         compatible = "zmk,combos";
 
-        Enter {
-            bindings = <&kp ENTER>;
-            key-positions = <54 53>;
-        };
-
         Home {
             bindings = <&kp HOME>;
             key-positions = <54 42>;
@@ -25,6 +20,17 @@
         End {
             bindings = <&kp END>;
             key-positions = <54 43>;
+        };
+    };
+
+    behaviors {
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp SPACE>, <&kp ENTER>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
